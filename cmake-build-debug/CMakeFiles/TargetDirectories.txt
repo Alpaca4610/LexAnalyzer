@@ -1,0 +1,3 @@
+/Users/alpaca/Desktop/BUPT/编译原理/LexAnalyzer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alpaca/Desktop/BUPT/编译原理/LexAnalyzer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alpaca/Desktop/BUPT/编译原理/LexAnalyzer/cmake-build-debug/CMakeFiles/LexAnalyzer.dir

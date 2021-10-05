@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/alpaca/Desktop/BUPT/编译原理/LexAnalyzer/functions.h
+iostream
+-
+
+/Users/alpaca/Desktop/BUPT/编译原理/LexAnalyzer/main.cpp
+fstream
+-
+functions.h
+/Users/alpaca/Desktop/BUPT/编译原理/LexAnalyzer/functions.h
+
