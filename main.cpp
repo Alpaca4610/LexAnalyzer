@@ -6,7 +6,7 @@ int main() {
     char tempch;
     int i = 0;
     int NumOfLines_ = 1;
-    int NumOfLines = 1;
+    int NumOfLines = 0;
     int NumOfChars = 0;
     int length = 0;
     int numOfNum = 0;
@@ -14,8 +14,6 @@ int main() {
     int numOfIdentifiers = 0;
     int numOfOperator = 0;
     int numOfBound_word = 0;
-
-//    std::string identifiers[1000];
 
     //将代码读入程序中
     std::ifstream codeFile("/Users/alpaca/Desktop/test.c");
@@ -56,9 +54,6 @@ int main() {
                             temp += "E";
                             i++;
                         } else {
-//                            std::cout << "发现错误，位置在第" << NumOfLines + 1 << "行,常数格式错误" << std::endl;
-//                            errorRecover(&i, code);
-//                            i--;
                             break;
                         }
                     }
@@ -81,7 +76,7 @@ int main() {
                 break;
             }
 
-            //若读入字符为英文字母
+                //若读入字符为英文字母
             case letter: {
                 int tmp;
                 //标识符拼接
@@ -96,7 +91,7 @@ int main() {
                     std::cout << "(" << temp << "," << tmp << ")" << std::endl;
                     numOfKeyword++;
                 }
-                //若不是，当作变量处理
+                    //若不是，当作变量处理
                 else {
                     std::cout << "(" << temp << ",63)" << std::endl;
                     numOfIdentifiers++;
@@ -105,7 +100,7 @@ int main() {
                 break;
             }
 
-            //若当前读入的字符为Symbol类型（分隔符与运算符）
+                //若当前读入的字符为Symbol类型（分隔符与运算符）
             case symbol: {
                 int tmp;
                 temp += code[i];
@@ -136,24 +131,7 @@ int main() {
                             numOfOperator++;
                             i++;
                             break;
-//                        } else if (isBrackets(code[i + 1]) || code[i + 1] == "/") {
-//                            std::cout << "(" << code[i] << "," << isSymbol(code[i]) << ")" << std::endl;
-//                            break;
-//                        } else {
-//                            std::cout << "分隔符：" << temp << "不合法" << std::endl;
-//                            errorRecover(&i, code);
-//                            break;
-//                        }
                         }
-//                    else if (isBrackets(code[i + 1]) || isSemicolon(code[i + 1]) || code[i + 1] == "/") {
-//                        std::cout << "(" << code[i] << "," << isSymbol(code[i]) << ")" << std::endl;
-//                        break;
-//                    }
-//                    else {
-//                        std::cout << "分隔符：" << temp << "不合法" << std::endl;
-//                        errorRecover(&i, code);
-//                        break;
-//                    }
                     }
 
                         //若不为双目运算符，则当成普通symbol处理
@@ -201,7 +179,7 @@ int main() {
         }
     }
 
-    std::cout << "分析完毕，一共有" << NumOfLines << "行。\n有" << length << "个字符（包含空格和换行符）";
+    std::cout << "分析完毕，一共有" << NumOfLines_ << "行。\n有" << length << "个字符（包含空格和换行符）";
     std::cout << "有" << numOfOperator << "个操作符" << "," << numOfBound_word << "个分隔符" << "," << numOfIdentifiers
               << "个id" << "," << numOfKeyword << "个关键字" << "," << numOfNum << "个常量";
 

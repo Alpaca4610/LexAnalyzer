@@ -30,5 +30,3 @@ WordType JudgeWordType(std::string);
 void errorRecover(int *, std::string[]);
 
 int isMultiSym(std::string);
-
-//std::string identifierConnect(std::string, std::string);

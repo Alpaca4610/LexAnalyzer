@@ -1,11 +1,5 @@
 #include "functions.h"
 
-////关键字列表
-//std::string KeyWord[20] = {"int","float","double","long","char","void","main","if","else","for","while","do","break","return","switch","default","case","printf","",""};
-////符号列表
-//std::string Symbol[17] = {"<",">",",",";","(",")","{","}","+","-","*","/","="};
-//std::string DoubleSymbol[] = {"!=",">=","<=","=="};
-
 //定义数据结构存储词语以及对应的记号
 class mark {
 private:
@@ -45,6 +39,7 @@ static mark KeyWordMark[30] = {
         mark("false", 29), mark("true", 30)
 };
 
+//C语言分隔符列表
 static mark BoundaryMark[11] = {
         mark(",", 31), mark(";", 32),
         mark("(", 33), mark(")", 34),
@@ -200,15 +195,3 @@ int isMultiSym(std::string data) {
     }
     return 0;
 }
-
-//bool isBrackets(std::string data) {
-//    if (data == "(" || data == ")" || data == "{" || data == "}" || data == "[" || data == "]" || data == "\"")
-//        return true;
-//    else
-//        return false;
-//}
-
-//std::string identifierConnect(std::string mainString, std::string charToConnect){
-//    mainString+=charToConnect;
-//    return mainString;
-//}
